@@ -1,19 +1,5 @@
 @import "../../App/styles/varables";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: #262433;
-}
-
 .menu {
   position: relative;
   width: 300px;
@@ -61,7 +47,6 @@ body {
     }
 
   }
-
 
   .toggle {
     position: absolute;
