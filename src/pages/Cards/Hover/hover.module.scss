@@ -1,0 +1,109 @@
+.container {
+  display: flex;
+  gap: 32px;
+
+  .card1 {
+    text-align: center;
+    width: 250px;
+    height: 350px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: linear-gradient(rgb(225, 150, 58), rgb(227, 144, 91));
+    transition: .6s;
+    transform: rotatex(55deg) translatey(-200px) translatez(-50px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+  }
+
+  .card1:hover {
+    transform: rotatex(10deg);
+    transition: .6s;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .card1 img {
+    transform: translateY(15px);
+    width: 200px;
+    height: 120px;
+  }
+
+  h3 {
+    font-size: 25px;
+    font-family: 'Abel', sans-serif;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 2px rgb(255, 255, 255);
+    transform: translatey(10px);
+  }
+
+  p {
+
+    font-family: 'Abel', sans-serif;
+    color: white;
+    text-align: center;
+    width: 220px;
+    transform: translatex(12px);
+  }
+
+  .card2 {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    margin: 0 auto;
+    background: #000;
+    border-radius: 15px;
+    box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+
+    .face {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &.face1 {
+        box-sizing: border-box;
+        padding: 20px;
+
+        .java {
+          background-color: #fffc00;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+      &.face2 {
+        transition: 0.5s;
+
+        h2 {
+          margin: 0;
+          padding: 0;
+          font-size: 10em;
+          color: #fff;
+          transition: 0.5s;
+          text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          z-index: 10;
+        }
+      }
+    }
+    &:hover{
+      .face.face2{
+        height: 70px;
+
+        h2 {
+          font-size: 2em;
+        }
+      }
+    }
+
+    &:nth-child(1) {
+      .face.face2 {
+        background-image: linear-gradient(80deg, #fffc00 0%, #fc00ff 45%, #00fffc 100%);
+        border-radius: 15px;
+      }
+    }
+  }
+
+}
+

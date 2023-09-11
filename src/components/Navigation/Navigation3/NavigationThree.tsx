@@ -15,7 +15,6 @@ const NavigationThree = () => {
     {icon: <IoSettingsOutline/>, color: "#569686",url: '#'},
     {icon: <AiOutlineMail/>, color: "#bcf0a5",url: '#'},
     {icon: <HiOutlineVideoCamera/>, color: "#c28da3",url: '#'},
-
   ]
 
   const [activeIndex, setActiveIndex] = useState(0)

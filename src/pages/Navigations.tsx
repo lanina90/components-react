@@ -1,7 +1,7 @@
 import React from 'react';
-import NavigationOne from "../components/Navigation1/NavigationOne";
-import NavigationTwo from "../components/Navigation2/NavigationTwo";
-import NavigationThree from "../components/Navigation3/NavigationThree";
+import NavigationOne from "../components/Navigation/Navigation1/NavigationOne";
+import NavigationTwo from "../components/Navigation/Navigation2/NavigationTwo";
+import NavigationThree from "../components/Navigation/Navigation3/NavigationThree";
 
 const Navigations = () => {
 

@@ -18,7 +18,7 @@ const Root = () => {
               <NavigationLink to={'menus'}><BsFillMenuButtonWideFill size={20}/>Navigation</NavigationLink>
             </li>
             <li>
-              <NavigationLink to={'menus'}><MdOutlineAnimation size={20}/>Animation</NavigationLink>
+              <NavigationLink to={'cards'}><MdOutlineAnimation size={20}/>Cards</NavigationLink>
             </li>
           </ul>
         </nav>
