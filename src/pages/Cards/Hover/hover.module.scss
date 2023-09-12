@@ -1,6 +1,7 @@
 .container {
   display: flex;
   gap: 32px;
+  flex-wrap: wrap;
 
   .card1 {
     text-align: center;
@@ -13,35 +14,35 @@
     transform: rotatex(55deg) translatey(-200px) translatez(-50px);
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
     cursor: pointer;
-  }
 
-  .card1:hover {
-    transform: rotatex(10deg);
-    transition: .6s;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  }
+    &:hover {
+      transform: rotatex(10deg);
+      transition: .6s;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
 
-  .card1 img {
-    transform: translateY(15px);
-    width: 200px;
-    height: 120px;
-  }
+    img {
+      transform: translateY(15px);
+      width: 200px;
+      height: 120px;
+    }
 
-  h3 {
-    font-size: 25px;
-    font-family: 'Abel', sans-serif;
-    color: rgb(255, 255, 255);
-    text-shadow: 0 0 2px rgb(255, 255, 255);
-    transform: translatey(10px);
-  }
+    h3 {
+      font-size: 25px;
+      font-family: 'Abel', sans-serif;
+      color: rgb(255, 255, 255);
+      text-shadow: 0 0 2px rgb(255, 255, 255);
+      transform: translatey(10px);
+    }
 
-  p {
+    p {
 
-    font-family: 'Abel', sans-serif;
-    color: white;
-    text-align: center;
-    width: 220px;
-    transform: translatex(12px);
+      font-family: 'Abel', sans-serif;
+      color: white;
+      text-align: center;
+      width: 220px;
+      transform: translatex(12px);
+    }
   }
 
   .card2 {
@@ -73,6 +74,7 @@
           -webkit-text-fill-color: transparent;
         }
       }
+
       &.face2 {
         transition: 0.5s;
 
@@ -87,8 +89,9 @@
         }
       }
     }
-    &:hover{
-      .face.face2{
+
+    &:hover {
+      .face.face2 {
         height: 70px;
 
         h2 {
@@ -104,6 +107,160 @@
       }
     }
   }
+
+  .box {
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 4rem;
+
+    &:hover {
+      .imgBox {
+        transform: translate(-3.5rem, -3.5rem);
+
+        @media (max-width: 600px) {
+          transform: translate(0, -3.5rem);
+        }
+
+      }
+
+      .content {
+        transform: translate(3.5rem, 3.5rem);
+
+        @media (max-width: 600px) {
+          transform: translate(0, 3.5rem);
+        }
+      }
+    }
+
+    .imgBox {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      transition: all 0.5s ease-in-out;
+
+      img {
+        width: 300px;
+        height: 350px;
+        object-fit: cover;
+        resize: both;
+      }
+    }
+
+    .content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background-color: #fff;
+      z-index: 1;
+      align-items: flex-end;
+      text-align: center;
+      transition: 0.5s ease-in-out;
+
+      h2 {
+        display: block;
+        font-size: 24px;
+        color: #111;
+        font-weight: 700;
+        line-height: 2rem;
+        letter-spacing: 1px;
+      }
+
+      span {
+        color: #555;
+        font-size: 20px;
+        font-weight: 300;
+        letter-spacing: 2px;
+      }
+    }
+  }
+
+  .courses_box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    .item {
+      -ms-flex-preferred-size: calc(33.33333% - 30px);
+      flex-basis: calc(33.33333% - 30px);
+      margin: 0 15px 30px;
+      overflow: hidden;
+      border-radius: 28px;
+
+      .link {
+        display: block;
+        padding: 30px 20px;
+        background-color: #121212;
+        overflow: hidden;
+        position: relative;
+
+        &:hover{
+          text-decoration: none;
+          color: #fff;
+          .item_bg {
+            -webkit-transform: scale(10);
+            -ms-transform: scale(10);
+            transform: scale(10);
+          }
+        }
+        .title {
+          min-height: 87px;
+          margin: 0 0 25px;
+          overflow: hidden;
+          font-weight: bold;
+          font-size: 30px;
+          color: #fff;
+          z-index: 2;
+          position: relative;
+        }
+
+        .date_box {
+          font-size: 18px;
+          color: #fff;
+          z-index: 2;
+          position: relative;
+
+          .date {
+            font-weight: bold;
+            color: #fff;
+            -webkit-transition: color 0.5s ease;
+            -o-transition: color 0.5s ease;
+            transition: color 0.5s ease;
+          }
+        }
+
+        .item_bg {
+          height: 128px;
+          width: 128px;
+          background-color: #f9b234;
+          z-index: 1;
+          position: absolute;
+          top: -75px;
+          right: -75px;
+          border-radius: 50%;
+          -webkit-transition: all 0.5s ease;
+          -o-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+        }
+      }
+
+    }
+  }
+
 
 }
 

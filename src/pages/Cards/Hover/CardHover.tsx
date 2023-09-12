@@ -27,6 +27,40 @@ const CardHover = () => {
           </div>
         </div>
       </div>
+
+      <div>
+        <div className={styles.box}>
+          <div className={styles.imgBox}>
+            <img src="https://bit.ly/3Y5oMQG" alt=""/>
+          </div>
+          <div className={styles.content}>
+            <h2>Karan Singh </h2>
+            <span>Graphic Designer</span>
+        </div>
+      </div>
+      </div>
+
+
+        <div className={styles.courses_box}>
+          <div className={styles.item}>
+            <a href="#" className={styles.link}>
+              <div className={styles.item_bg}></div>
+
+              <div className={styles.title}>
+                UI/Web&amp;Graph design for teenagers 11-17&#160;years old
+              </div>
+
+              <div className={styles.date_box}>
+                Start:
+                <span className={styles.date}>
+            04.11.2022
+          </span>
+              </div>
+            </a>
+          </div>
+
+        </div>
+
     </div>
   );
 };
